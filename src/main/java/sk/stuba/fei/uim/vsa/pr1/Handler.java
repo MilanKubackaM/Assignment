@@ -18,6 +18,9 @@ public class Handler extends AbstractThesisService<Student, Teacher, Assignment>
         EntityManager em = emf.createEntityManager();
         Student student = new Student();
 
+        if (em.find(Student.class, aisId) != null) return null;
+        if (em.find(Teacher.class, aisId) != null) return null;
+
         student.setAisId(aisId);
         student.setName(name);
         student.setEmail(email);
@@ -170,6 +173,10 @@ public class Handler extends AbstractThesisService<Student, Teacher, Assignment>
 
         EntityManager em = emf.createEntityManager();
         Teacher teacher = new Teacher();
+
+        if (em.find(Student.class, aisId) != null) return null;
+        if (em.find(Teacher.class, aisId) != null) return null;
+
         teacher.setAisId(aisId);
         teacher.setName(name);
         teacher.setEmail(email);

@@ -10,12 +10,11 @@ public class Project1 {
     }
 
     public static void main(String[] args) {
-        // Handler handler = new Handler();
-
 
 // =================================STUDENT======================================  //
 
         // >>>>>> CREATE STUDENT <<<<<
+        handler.createStudent(256L, "Sano Prvy", "created1@stuba.sk");
         handler.createStudent(256L, "Sano Prvy", "created1@stuba.sk");
         handler.createStudent(255L, "Miro", "created2@stuba.sk");
         handler.createStudent(1L, "Denis Treti", "created3@stuba.sk");
@@ -35,9 +34,9 @@ public class Project1 {
         }
 
         // >>>>>> DELETE STUDENT <<<<<
-        Long idForDeleteStudent = 256L;
-        handler.assignThesis(1L, 256L);
-        System.out.println("Deleted student: " + handler.deleteStudent(idForDeleteStudent));
+       // Long idForDeleteStudent = 256L;
+      //  handler.assignThesis(1L, 256L);
+       // System.out.println("Deleted student: " + handler.deleteStudent(idForDeleteStudent));
 
 // ================================TEACHER=========================================  //
 
@@ -52,12 +51,12 @@ public class Project1 {
 //        System.out.println("Get teacher: " + handler.getTeacher(teacherID));
 
         // >>>>> UPDATE TEACHER <<<<<
-//        Teacher teacher = new Teacher();
-//        teacher.setAisId(123L);
-//        teacher.setName("Peter updated");
-//        teacher.setEmail("totoJeUpdate@gmail.com");
-//        handler.updateTeacher(teacher);
-//        System.out.println("Updated teacher: " + handler.updateTeacher(teacher));
+        Teacher teacher = new Teacher();
+        teacher.setAisId(123L);
+        teacher.setName("Peter updated");
+        teacher.setEmail("totoJeUpdate@gmail.com");
+        handler.updateTeacher(teacher);
+        System.out.println("Updated teacher: " + handler.updateTeacher(teacher));
 
         // >>>>> GET TEACHERS <<<<<<
 //        List<Teacher> allTeachers = handler.getTeachers();
